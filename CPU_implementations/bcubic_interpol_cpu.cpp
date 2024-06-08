@@ -90,7 +90,7 @@ int main() {
     int height; //image height
     int bpp;  //bytes per pixel if the image is RGB
 
-    std::string input_image_path = "../samples/forest.jpg";
+    std::string input_image_path = "../samples/butterfly.png";
     
     // Load image
     uint8_t* original_image = stbi_load(input_image_path.c_str(), &width, &height, &bpp, NUM_CHANNELS);

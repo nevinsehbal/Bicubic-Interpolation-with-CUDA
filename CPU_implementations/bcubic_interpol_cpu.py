@@ -64,7 +64,7 @@ def bicubic_interpolation(original_image, scale_factor):
 
     return scaled_image
 
-input_image_path = '../samples/castle.jpg'
+input_image_path = '../samples/butterfly.png'
 
 # Load the original image
 original_image = cv2.imread(input_image_path)
@@ -84,5 +84,5 @@ scaled_image = bicubic_interpolation(original_image, scale_factor)
 print(scaled_image.shape, original_image.shape)
 
 # Save the upscaled image
-output_image_path = input_image_path.replace('.jpg', '_upscaled.png')
+output_image_path = input_image_path.replace('.png', '_upscaled.png')
 cv2.imwrite(output_image_path, scaled_image)

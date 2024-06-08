@@ -10,10 +10,10 @@
 
 #define NUM_CHANNELS 3
 
-// #include <thrust/device_vector.h>
-// #include <thrust/transform.h>
-// #include <thrust/extrema.h>
-// #include <thrust/functional.h>
+#include <thrust/device_vector.h>
+#include <thrust/transform.h>
+#include <thrust/extrema.h>
+#include <thrust/functional.h>
 
 std::vector<std::vector<std::vector<int>>> bicubic_interpolation(std::vector<std::vector<std::vector<int>>> original_image, double scale_factor);
 double bicubic_weight(double t);
