@@ -21,3 +21,7 @@ To run bcubic_interpol_cpu.py:
 
 * Numpy Version:  1.26.4
 * OpenCV Version:  4.9.0
+
+# Reference
+
+[Bicubic-interpolation implementation by https://github.com/rootpine/](https://github.com/rootpine/Bicubic-interpolation)
