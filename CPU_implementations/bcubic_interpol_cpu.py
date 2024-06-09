@@ -64,10 +64,14 @@ def bicubic_interpolation(original_image, scale_factor):
 
     return scaled_image
 
-input_image_path = '../samples/butterfly.png'
+input_image_path = '../samples/forest.jpg'
 
 # Load the original image
 original_image = cv2.imread(input_image_path)
+
+if(original_image is None):
+    print("Image not found")
+    exit()
 
 # Scale factor for upscaling
 scale_factor = 2
@@ -75,14 +79,8 @@ scale_factor = 2
 # Perform bicubic interpolation
 scaled_image = bicubic_interpolation(original_image, scale_factor)
 
-# Display the original and upscaled images
-# cv2.imshow('Original Image', original_image)
-# cv2.imshow('Scaled Image', scaled_image)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
-
 print(scaled_image.shape, original_image.shape)
 
 # Save the upscaled image
-output_image_path = input_image_path.replace('.png', '_upscaled.png')
+output_image_path = '../samples/py_raw_cpu_forest_upscaled.png'
 cv2.imwrite(output_image_path, scaled_image)
